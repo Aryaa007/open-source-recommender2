@@ -2,12 +2,11 @@ package com.arya.open_source_recommender.Model;
 
 public class Repository {
     private String name;
-    private String html_url; // the GitHub repo link
-    private String language; // optional if you want
+    private String html_url; 
+    private String language; 
 
     public Repository() {}
 
-    // getters and setters
     public String getName() {
         return name;
     }

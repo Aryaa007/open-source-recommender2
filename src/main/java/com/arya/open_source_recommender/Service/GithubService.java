@@ -136,15 +136,14 @@ public List<Issue> getBeginnerIssues(String owner, String repoName) {
     return issues != null ? Arrays.asList(issues) : new ArrayList<>();
 }
 public List<String> getRecommendedRepoLinks(String username) {
-    Map<String, Integer> skills = detectSkills(username); // languages the user knows
+    Map<String, Integer> skills = detectSkills(username); 
     List<String> links = new ArrayList<>();
 
     for (String language : skills.keySet()) {
-        List<RecommendedRepo> repos = searchRepositories(language); // search top repos in that language
+        List<RecommendedRepo> repos = searchRepositories(language);
 
-        // Take top 5 per language
         for (RecommendedRepo repo : repos.subList(0, Math.min(5, repos.size()))) {
-            links.add(repo.getHtml_url()); // only link
+            links.add(repo.getHtml_url()); 
         }
     }
 

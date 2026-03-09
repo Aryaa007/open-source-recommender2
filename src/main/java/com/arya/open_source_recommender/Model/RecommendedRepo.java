@@ -29,9 +29,8 @@ public class RecommendedRepo {
     public void setStargazers_count(int stargazers_count) {
         this.stargazers_count = stargazers_count;
     }
-    private String owner_login; // add this
+    private String owner_login;
 
-    // getters and setters
     public String getOwner_login() { return owner_login; }
     public void setOwner_login(String owner_login) { this.owner_login = owner_login; }
 }
